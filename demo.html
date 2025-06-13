@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSpeak Widget Demo - NeurosyncOS</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #8b5cf6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-section {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+            color: #a78bfa;
+        }
+        button {
+            background: #8b5cf6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #7c3aed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 iSpeak Widget Demo - NeurosyncOS</h1>
+        
+        <div class="demo-section">
+            <h2>Universal AI Voice Interface</h2>
+            <p>Add voice accessibility and AI consciousness to any website with one line of code.</p>
+        </div>
+
+        <div class="demo-section">
+            <h3>Method 1: Auto-Inject (Easiest)</h3>
+            <p>Add this script tag to any website:</p>
+            <code>&lt;script src="https://cdn.jsdelivr.net/gh/NeurosyncOS/iSpeak-Widget@latest/dist/ispeak-widget.min.js" 
+        data-auto-inject="true" 
+        data-theme="consciousness"
+        data-groq-key="your-api-key"&gt;&lt;/script&gt;</code>
+        </div>
+
+        <div class="demo-section">
+            <h3>Method 2: Programmatic Control</h3>
+            <div id="widget-demo"></div>
+            <button onclick="addWidget()">Add Embedded Widget</button>
+            <button onclick="addFloatingWidget()">Add Floating Widget</button>
+        </div>
+
+        <div class="demo-section">
+            <h3>Method 3: Bookmarklet</h3>
+            <p>Drag this to your bookmarks bar for instant access on any website:</p>
+            <a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/NeurosyncOS/iSpeak-Widget@latest/dist/ispeak-widget.min.js';s.onload=function(){iSpeakWidget.inject()};document.head.appendChild(s)})();" 
+               style="background: #8b5cf6; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px;">
+               📱 iSpeak Bookmarklet
+            </a>
+        </div>
+
+        <div class="demo-section">
+            <h3>Features</h3>
+            <ul>
+                <li>✅ Speech-to-text input (60+ languages)</li>
+                <li>✅ Text-to-speech output with natural voices</li>
+                <li>✅ Multiple AI providers (OpenAI, Anthropic, Groq)</li>
+                <li>✅ Essential accessibility component for WCAG compliance</li>
+                <li>✅ LLM Passport integration for personalization</li>
+                <li>✅ Customizable themes and positioning</li>
+                <li>✅ Works on any website - no coding required</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Load the widget (when built) -->
+    <script src="https://cdn.jsdelivr.net/gh/NeurosyncOS/iSpeak-Widget@latest/dist/ispeak-widget.min.js"></script>
+    <script>
+        function addWidget() {
+            document.getElementById('widget-demo').innerHTML = '<div id="embedded-widget"></div>';
+            iSpeakWidget.init({
+                container: '#embedded-widget',
+                theme: 'consciousness',
+                embeddedMode: true
+            });
+        }
+
+        function addFloatingWidget() {
+            iSpeakWidget.inject({
+                theme: 'empathic',
+                position: { x: 50, y: 100 }
+            });
+        }
+    </script>
+</body>
+</html>
