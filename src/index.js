@@ -57,4 +57,4 @@ document.addEventListener('DOMContentLoaded', function() {
       theme: script.dataset.theme || 'consciousness',
       position: {
         x: parseInt(script.dataset.x) || 20,
-        y: p
+        y: parseInt(script.dataset.y) || 20
