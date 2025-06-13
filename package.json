@@ -1,0 +1,21 @@
+{
+  "name": "ispeak-widget",
+  "version": "1.0.0",
+  "description": "Universal AI voice interface widget for websites",
+  "main": "dist/ispeak-widget.min.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "keywords": [
+    "accessibility",
+    "voice",
+    "ai",
+    "widget",
+    "speech-recognition",
+    "neurosync"
+  ],
+  "author": "NeurosyncOS",
+  "license": "MIT",
+  "jsdelivr": "dist/ispeak-widget.min.js"
+}
