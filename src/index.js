@@ -58,3 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
       position: {
         x: parseInt(script.dataset.x) || 20,
         y: parseInt(script.dataset.y) || 20
+      },
+      apiKeys: {
+        groq: script.dataset.groqKey,
+        openai: script.dataset.openaiKey,
+        anthropic: script.dataset.anthropicKey
+      }
+    });
+  }
+});
+
+export default iSpeakWidget;
